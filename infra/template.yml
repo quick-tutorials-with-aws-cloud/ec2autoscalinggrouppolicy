@@ -224,18 +224,3 @@ Resources:
       AdjustmentType: ChangeInCapacity
       Cooldown: 300
       ScalingAdjustment: 1
-
-  # EC2:
-  #   Type: AWS::EC2::Instance
-  #   DependsOn:
-  #     - PredictiveScalingPolicy
-  #     - TargetTrackingScalingPolicy
-  #     - StepScalingPolicy
-  #     - SimpleScalingPolicy
-  #   Properties:
-  #     LaunchTemplate: !Ref LaunchTemplate
-  #     Tags:
-  #       - Key: Name
-  #         Value: !Sub ${AutoScalingGroupName}EC2Instance
-  #       - Key: Owner
-  #         Value: !Ref Owner
